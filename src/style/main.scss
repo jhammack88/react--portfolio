@@ -1,0 +1,40 @@
+html {
+    font-size: 62.5%; // 1rem is 10px
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'montserrat';
+}
+
+body {
+    overflow-x: hidden;
+    font-weight: normal;
+    background-color: #ACD0C0;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+
+    display: grid;
+    justify-items: center;
+    background-color:  #4F6457;
+    padding-top: 15px;
+    padding-bottom: 15px; 
+    color: #1995AD;
+    font-size: 15px;
+    border-top: 3px solid #D9B44A;
+    border-bottom: 3px solid #D9B44A;
+}
+
+.nav-bar {
+    font-size: 24px;
+}
