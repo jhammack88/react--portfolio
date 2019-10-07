@@ -8,7 +8,7 @@ export default function() {
         
 
             <div>
-                <Link to="/about-me">Read me about myself</Link>
+                <Link to="/about-me">Read more about myself</Link>
             </div>
         </div>
     );
