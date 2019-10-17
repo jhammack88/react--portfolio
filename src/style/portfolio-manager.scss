@@ -3,11 +3,12 @@
   grid-template-columns: 3fr 1fr;
 
   .left-column {
-    background-color: maroon;
+    background-color: $offwhite;
     border-radius: 0px 10px 0px 0px;
   }
 
   .right-column {
-    background-color: orange;
+    background-color: $charcoal;
+    border-radius: 10px 0px 0px 0px;
   }
 }
