@@ -59,7 +59,7 @@ export default class PortfolioForm extends Component {
         description,
         category,
         position,
-        url,
+        url, 
         thumb_image_url,
         banner_image_url,
         logo_url
