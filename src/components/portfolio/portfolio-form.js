@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import DropzoneComponent from "react-dropzone-component";
 
-import "../../../node_modules/react-dropzone-component/styles/filepicker.css";
-import "../../../node_modules/dropzone/dist/min/dropzone.min.css";
-
 export default class PortfolioForm extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +16,7 @@ export default class PortfolioForm extends Component {
       banner_image: "",
       logo: "",
       editMode: false,
-      apiUrl: "https://johnhammack.devcamp.space/portfolio/portfolio_items",
+      apiUrl: "https://jordan.devcamp.space/portfolio/portfolio_items",
       apiAction: "post"
     };
 
@@ -40,7 +37,8 @@ export default class PortfolioForm extends Component {
   deleteImage(imageType) {
     axios
       .delete(
-        `https://api.devcamp.space/portfolio/delete-portfolio-image/${this.state.id}?image_type=${imageType}`,
+        `https://api.devcamp.space/portfolio/delete-portfolio-image/${this.state
+          .id}?image_type=${imageType}`,
         { withCredentials: true }
       )
       .then(response => {
@@ -173,7 +171,7 @@ export default class PortfolioForm extends Component {
           banner_image: "",
           logo: "",
           editMode: false,
-          apiUrl: "https://jordan.devcamp.space/portfolio/portfolio_items",
+          apiUrl: "https://johnhammack.devcamp.space/portfolio/portfolio_items",
           apiAction: "post"
         });
 

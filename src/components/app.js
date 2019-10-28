@@ -10,10 +10,9 @@ import Blog from "./pages/blog";
 import BlogDetail from "./pages/blog-detail";
 import PortfolioManager from "./pages/portfolio-manager";
 import PortfolioDetail from "./portfolio/portfolio-detail";
-import Auth from "./auth/login";
+import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
 import Icons from "../helpers/icons";
-
 
 export default class App extends Component {
   constructor(props) {
@@ -114,14 +113,24 @@ export default class App extends Component {
 
               <Route path="/about-me" component={About} />
               <Route path="/contact" component={Contact} />
-              <Route 
-                path="/blog" 
+
+              <Route
+                path="/blog"
                 render={props => (
                   <Blog {...props} loggedInStatus={this.state.loggedInStatus} />
-              )}
+                )}
               />
 
-              <Route path="/b/:slug" component={BlogDetail} />
+              <Route
+                path="/b/:slug"
+                render={props => (
+                  <BlogDetail
+                    {...props}
+                    loggedInStatus={this.state.loggedInStatus}
+                  />
+                )}
+              />
+
               {this.state.loggedInStatus === "LOGGED_IN"
                 ? this.authorizedPages()
                 : null}
